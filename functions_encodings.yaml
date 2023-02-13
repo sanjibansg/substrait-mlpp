@@ -1,0 +1,22 @@
+%YAML 1.2
+---
+aggregate_functions:
+   -
+    name: "one-hot"
+    description: "Encode categorical features into indicator variables"
+    impls:
+      - args:
+          - name: x
+            value: List<any>
+        return: List<List<bool>>
+   -
+    name: "inverse-one-hot"
+    description: "Inverts the one-hot operation"
+    impls:
+      - args:
+          - name: x
+            value: List<List<bool>>
+          - name: categorises
+            value: List<any>
+        return: List<any>
+      

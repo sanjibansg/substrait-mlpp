@@ -334,7 +334,3 @@ aggregate_functions:
           - name: value 
             value: fp64
         return: any
-
-  
-
-
