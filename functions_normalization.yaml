@@ -1,0 +1,193 @@
+%YAML 1.2
+---
+aggregate_functions:
+   -
+    name: "standardize"
+    description: "Normalizing features to have zero mean and unit standard deviation"
+    impls:
+      - args:
+          - name: x
+            value: List<i16>    
+          - name: use_mean
+            value: bool 
+          - name: use_std
+            value: bool
+        return: List<fp32>
+      - args:
+          - name: x
+            value: List<i32>    
+          - name: use_mean
+            value: bool 
+          - name: use_std
+            value: bool
+        return: List<fp32>
+      - args:
+          - name: x
+            value: List<i64>    
+          - name: use_mean
+            value: bool 
+          - name: use_std
+            value: bool
+        return: List<fp64>
+      - args:
+          - name: x
+            value: List<fp32>    
+          - name: use_mean
+            value: bool 
+          - name: use_std
+            value: bool
+        return: List<fp32>
+      - args:
+          - name: x
+            value: List<fp64>    
+          - name: use_mean
+            value: bool 
+          - name: use_std
+            value: bool
+        return: List<fp64>
+   -
+    name: "range-scaler"
+    description: "Normalizing features by scaling to a given range"
+    impls:
+      - args:
+          - name: x
+            value: List<i16>    
+          - name: min
+            value: i16 
+          - name: max
+            value: i16
+        return: List<fp32>
+      - args:
+          - name: x
+            value: List<i32>    
+          - name: min
+            value: i32
+          - name: max
+            value: i32
+        return: List<fp32>
+      - args:
+          - name: x
+            value: List<i64>    
+          - name: min
+            value: i64 
+          - name: max
+            value: i64
+        return: List<fp64>
+      - args:
+          - name: x
+            value: List<fp32>    
+          - name: min
+            value: fp32 
+          - name: max
+            value: fp32
+        return: List<fp32>
+      - args:
+          - name: x
+            value: List<fp64>    
+          - name: min
+            value: fp64
+          - name: max
+            value: fp64
+        return: List<fp64>
+   -
+    name: "max-absolute-scaler"
+    description: "Normalizing features by scaling to range [-1,1] by diving through the maximum absolute value"
+    impls:
+      - args:
+          - name: x
+            value: List<i16>    
+        return: List<fp32>
+      - args:
+          - name: x
+            value: List<i32>    
+        return: List<fp32>
+      - args:
+          - name: x
+            value: List<i64>    
+        return: List<fp64>
+      - args:
+          - name: x
+            value: List<fp32>    
+        return: List<fp32>
+      - args:
+          - name: x
+            value: List<fp64>    
+        return: List<fp64>
+   -
+    name: "normalize"
+    description: "Normalizing features to unit-norm by the degree of normalizer"
+    impls:
+      - args:
+          - name: x
+            value: List<i16>
+          - name: normalizer
+            value: fp32   
+        return: List<fp32>
+      - args:
+          - name: x
+            value: List<i32>  
+          - name: normalizer
+            value: fp32   
+        return: List<fp32>
+      - args:
+          - name: x
+            value: List<i64>
+          - name: normalizer
+            value: fp32     
+        return: List<fp64>
+      - args:
+          - name: x
+            value: List<fp32>   
+          - name: normalizer
+            value: fp32  
+        return: List<fp32>
+      - args:
+          - name: x
+            value: List<fp64>    
+          - name: normalizer
+            value: fp32 
+        return: List<fp64>
+   -
+    name: "robust-scale"
+    description: "Normalizing features to quantile range"
+    impls:
+      - args:
+          - name: x
+            value: List<i16>
+          - name: qmin
+            value: fp32 
+          - name: qmax
+            value: fp32   
+        return: List<fp32>
+      - args:
+          - name: x
+            value: List<i32>  
+          - name: qmin
+            value: fp32 
+          - name: qmax
+            value: fp32    
+        return: List<fp32>
+      - args:
+          - name: x
+            value: List<i64>
+          - name: qmin
+            value: fp32 
+          - name: qmax
+            value: fp32       
+        return: List<fp64>
+      - args:
+          - name: x
+            value: List<fp32>   
+          - name: qmin
+            value: fp32 
+          - name: qmax
+            value: fp32   
+        return: List<fp32>
+      - args:
+          - name: x
+            value: List<fp64>    
+          - name: qmin
+            value: fp32 
+          - name: qmax
+            value: fp32   
+        return: List<fp64>
