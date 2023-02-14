@@ -1,0 +1,74 @@
+%YAML 1.2
+---
+aggregate_functions:
+   -
+    name: "sample"
+    description: "Sampling features consistently"
+    impls:
+      - args:
+          - name: x
+            value: List<List<i16>>
+          - name: n_samples
+            value: i32          
+        return: List<List<i16>>
+      - args:
+          - name: x
+            value: List<List<i32>>
+          - name: n_samples
+            value: i32          
+        return: List<List<i32>>
+      - args:
+          - name: x
+            value: List<List<i64>>
+          - name: n_samples
+            value: i32        
+        return: List<List<i64>>
+      - args:
+          - name: x
+            value: List<List<fp32>>
+          - name: n_samples
+            value: i32          
+        return: List<List<fp32>>
+      - args:
+          - name: x
+            value: List<List<fp64>>
+          - name: n_samples
+            value: i32         
+        return: List<List<fp64>>
+   -
+    name: "count_vectorizer"
+    description: "count of features"
+    impls:
+      - args:
+          - name: x
+            value: List<any>        
+        return: List<i32>
+   -
+    name: "ngram"
+    description: "transform list of string to list of ngrams"
+    impls:
+      - args:
+          - name: x
+            value: List<string>   
+          - name: length
+            value: i32        
+        return: List<string>
+   -
+    name: "stop_words_remover"
+    description: "remove stop words from list of strings"
+    impls:
+      - args:
+          - name: x
+            value: List<string>   
+          - name: stop_word
+            value: string        
+        return: List<string>
+   -
+    name: "tokenizer"
+    description: "tokenize string to list of distinct substrings"
+    impls:
+      - args:
+          - name: x
+            value: string         
+        return: List<string>
+        
