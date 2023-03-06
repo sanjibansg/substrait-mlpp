@@ -3,7 +3,22 @@
 aggregate_functions:
    -
     name: "standardize"
-    description: "Normalizing features to have zero mean and unit standard deviation"
+    description: >
+      Normalizing features to have zero mean and unit standard deviation
+
+      The standard score(z) of a sample is determined by:
+        z = (x - u)/s, where z is the standard score
+                             u is sample's mean
+                             s is sample's standard deviation
+  
+      For example, consider an example sample, S = {1,2,3,4,5}
+      Mean of the sample = 3
+      Standard deviation of the sample = 1.58
+      Transformed sample will be: {-1.26, -0.63, 0, 0.63, 1.26}
+
+      Standardizing a sample makes it centered around 0, with unit standard
+      deviation.
+
     impls:
       - args:
           - name: x
