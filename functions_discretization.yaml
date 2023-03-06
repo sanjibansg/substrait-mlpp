@@ -267,7 +267,7 @@ aggregate_functions:
         return 1
       else
         return 0
-        
+
     impls:
       - args:
           - name: x
@@ -301,7 +301,7 @@ aggregate_functions:
         return: List<bool>
    -
     name: "label_binarizer"
-    description: "label data in binary for a one-vs-all fashion"
+    description: "Label data in binary for a one-vs-all fashion"
     impls:
       - args:
           - name: x
@@ -324,7 +324,7 @@ aggregate_functions:
             values: [NONE, ASCENDING, DESCENDING]
    -
     name: "multi_label_binarizer"
-    description: "labelling iterable of iterables"
+    description: "Labelling iterable of iterables"
     impls:
       - args:
           - name: x
@@ -332,7 +332,7 @@ aggregate_functions:
         return: List<List<i32>>
    -
     name: "dummy_feature"
-    description: "add a dummy feature in a dataset"
+    description: "Adds a dummy feature in a dataset"
     impls:
       - args:
           - name: x

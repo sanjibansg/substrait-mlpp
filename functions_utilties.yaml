@@ -37,7 +37,7 @@ aggregate_functions:
         return: List<List<fp64>>
    -
     name: "count_vectorizer"
-    description: "count of features"
+    description: "Count of features"
     impls:
       - args:
           - name: x
@@ -45,7 +45,7 @@ aggregate_functions:
         return: List<i32>
    -
     name: "ngram"
-    description: "transform list of string to list of ngrams"
+    description: "Transform list of string to list of ngrams"
     impls:
       - args:
           - name: x
@@ -55,7 +55,7 @@ aggregate_functions:
         return: List<string>
    -
     name: "stop_words_remover"
-    description: "remove stop words from list of strings"
+    description: "Remove stop words from list of strings"
     impls:
       - args:
           - name: x
@@ -65,7 +65,7 @@ aggregate_functions:
         return: List<string>
    -
     name: "tokenizer"
-    description: "tokenize string to list of distinct substrings"
+    description: "Tokenize string to list of distinct substrings"
     impls:
       - args:
           - name: x
