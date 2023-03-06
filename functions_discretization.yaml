@@ -321,14 +321,6 @@ aggregate_functions:
             value: List<List<any>> 
         return: List<List<i32>>
    -
-    name: "multi_label_binarizer"
-    description: "labelling iterable of iterables"
-    impls:
-      - args:
-          - name: x
-            value: List<List<any>> 
-        return: List<List<i32>>
-   -
     name: "dummy_feature"
     description: "add a dummy feature in a dataset"
     impls:
