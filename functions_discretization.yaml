@@ -257,7 +257,17 @@ aggregate_functions:
         return: List<List<fp64>>
    -
     name: "binarizer"
-    description: "Binarize data according to threshold"
+    description: >
+      Binarize data according to threshold
+
+      The function should transform values to a boolean 
+      based on a threshold
+
+      if data > threshold
+        return 1
+      else
+        return 0
+        
     impls:
       - args:
           - name: x
