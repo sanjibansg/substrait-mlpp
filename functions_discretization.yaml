@@ -3,7 +3,13 @@
 aggregate_functions:
    -
     name: "cut"
-    description: "Categorises values into regular intervals"
+    description: >
+      Categorises values into regular intervals
+
+      Bins may refer to the exact number of equal-width partitions or,
+      bin-edges allowing non-uniform width.
+
+      Options specifies including either the left, right or both intervals.
     impls:
       - args:
           - name: x
